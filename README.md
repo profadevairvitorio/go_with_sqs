@@ -25,14 +25,18 @@ Certifique-se de ter o LocalStack instalado e em execução antes de começar.
     ```
 
 ### Funcionalidades
-createSQSSession()
+1)createSQSSession()
+
 Cria e retorna uma instância do serviço SQS configurada para o LocalStack.
 
-createQueue(svc *sqs.SQS) (*string, error)
+2)createQueue(svc *sqs.SQS) (*string, error)
+
 Cria uma fila SQS e retorna a URL da fila.
 
-sendMessage(svc *sqs.SQS, queueURL *string, messageBody string) error
+3)sendMessage(svc *sqs.SQS, queueURL *string, messageBody string) error
+
 Envia uma mensagem para a fila especificada.
 
-receiveMessage(svc *sqs.SQS, queueURL *string) error
+4)receiveMessage(svc *sqs.SQS, queueURL *string) error
+
 Recebe e processa mensagens da fila.
